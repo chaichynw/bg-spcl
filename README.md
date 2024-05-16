@@ -2,7 +2,7 @@
 
 ## Abstract 
 
-![framework.pdf](https://github.com/chaichynw/bg-spcl/files/15329501/framework.pdf)
+![framework.pdf](https://github.com/chaichynw/bg-spcl/files/15338297/framework.pdf)
 
 
 Human-machine interfaces (HMIs) face several challenges. 
@@ -33,18 +33,19 @@ The datasets can be downloaded through [Moabb](https://moabb.neurotechx.com/docs
 
 ## Evaluation
 
-![evaluation_scheme.pdf](https://github.com/chaichynw/bg-spcl/files/15329498/evaluation_scheme.pdf)
+![evaluation_scheme.pdf](https://github.com/chaichynw/bg-spcl/files/15338305/evaluation_scheme.pdf)
+
 
 We conducted performance evaluations by dividing them into offline and online modes.
 
 In **offline mode**, we evaluate the generalization ability of the pre-trained model through inter-session performance.
     
-    main.py --config_name 'bnci2014004_config' --target_subject 0 --is_test False --online_update False
+    main.py --config_name 'bnci2014004_config'
 
 
 In **online mode**, we observe how the pre-trained model adapts when unlabeled EEG signals are streamed, utilizing the Zhou2016 dataset, which has three sessions with the **same paradigm**, to understand the form of  model adaptation over a long period.
 
-    main.py --config_name 'bnci2014004_config' --target_subject 0 --is_test True --online_update True
+    main.py --config_name 'bnci2014004_config' --is_test True --online_update True
 
 Please note, as indicated in prior research, performance can fluctuate due to user adaptations over multiple sessions. Thus, to exclusively assess the impact of the learning algorithm, we inverted the sequence of training and testing.
 
