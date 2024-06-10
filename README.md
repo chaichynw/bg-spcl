@@ -47,5 +47,5 @@ In **online mode**, we observe how the pre-trained model adapts when unlabeled E
 
     main.py --config_name 'bnci2014004_config' --is_test True --online_update True
 
-Please note, as indicated in prior research, performance can fluctuate due to user adaptations over multiple sessions. Thus, to exclusively assess the impact of the learning algorithm, we inverted the sequence of training and testing.
+
 
